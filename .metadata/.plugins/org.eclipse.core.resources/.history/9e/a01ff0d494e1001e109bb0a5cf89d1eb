@@ -1,0 +1,19 @@
+package practica0;
+
+//Escribir un m´etodo static double potencia(double x, int a) que toma un n´umero racional
+//x y un entero a y calcula x
+//a
+//.
+
+public class Ejercicio12 {
+
+	public static void main(String[] args) {
+		System.out.println(potencia(2, 3));
+		
+
+	}
+	public static double potencia(double x, int a) {
+		return Math.pow(x, a);
+	}
+
+}
