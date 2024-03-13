@@ -1,0 +1,20 @@
+package practica0;
+
+public class Ejercicio11 {
+
+	public static void main(String[] args) {
+		System.out.println(sumatoriaPares(12));
+
+	}
+	public static int sumatoriaPares(int n) {
+		int suma=0;
+		for(int i =0;i<=n;i++) {
+			if(i%2==0) {
+				suma+=i;
+			}
+			
+		}
+		return suma;
+	}
+
+}
