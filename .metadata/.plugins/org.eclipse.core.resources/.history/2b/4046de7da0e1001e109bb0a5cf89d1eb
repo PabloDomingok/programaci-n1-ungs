@@ -1,0 +1,18 @@
+package practica0;
+
+//Escribir un método static int cantCifras(int n) que devuelve la cantidad de cifras de n.
+//Probarlo adecuadamente llamándola desde el main.
+
+public class Ejercicio14 {
+
+	public static void main(String[] args) {
+		int a=3;
+		int b=10;
+		System.out.println(a/b);
+
+	}
+	public static int cantCifras(int n ) {
+		return 1;
+	}
+
+}
