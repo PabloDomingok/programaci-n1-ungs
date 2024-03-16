@@ -31,14 +31,16 @@ public class Ejercicio16 {
 		imprimirRerversa(s);
 
 	}
-//ejercicio b) y d)
+//ejercicio b)
 	
 	public static void imprimirRerversa(String s) {
-		System.out.println(reversa(s));
+		String palabraReversa = "";
+		for(int i=s.length()-1; i>=0;i--) {
+			palabraReversa+=s.charAt(i);
+			
 		}
-		
-	
-
+		System.out.println(palabraReversa);
+	}
 //ejercicio c)
 	
 	public static String reversa(String s) {
@@ -47,6 +49,6 @@ public class Ejercicio16 {
 			palabraReversa+=s.charAt(i);
 		}
 		return palabraReversa;
-	}	
+	}
 	
 }
