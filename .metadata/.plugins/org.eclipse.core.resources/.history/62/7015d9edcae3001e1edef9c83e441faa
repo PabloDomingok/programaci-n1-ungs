@@ -1,0 +1,20 @@
+package practica0;
+
+import java.util.Scanner;
+
+public class Ejercicio16 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Ingrese una palabra");
+		String palabra = scan.nextLine();
+		String palabraReversa = "";
+		for(int i=palabra.length()-1; i<palabra.length();i--) {
+			palabraReversa+=palabra.charAt(i);
+			
+		}
+		System.out.println(palabraReversa);
+
+	}
+
+}
