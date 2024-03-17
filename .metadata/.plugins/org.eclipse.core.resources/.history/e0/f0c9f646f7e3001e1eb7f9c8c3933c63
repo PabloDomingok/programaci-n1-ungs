@@ -1,0 +1,23 @@
+package practica0;
+
+public class Ejercicio20 {
+
+	public static void main(String[] args) {
+		String s="mene";
+		System.out.println(esCapicua(s));
+		
+
+	}
+	public static boolean esCapicua(String s) {
+		for(int i=0; i<s.length();i++) {
+			for(int j=s.length()-1;j>=0;i--) {
+				if(s.charAt(i)==s.charAt(j)) {
+					return true;
+				}
+			}
+		}
+	
+	return false;
+
+}
+}
