@@ -19,9 +19,9 @@ public class Ejercicio19 {
 
 //Ejercicio 1
 	public static boolean abecedaria(String s) {
-		s.toLowerCase();
-		for(int i = 0; i<s.length()-1; i++) {
-			if(s.charAt(i)>s.charAt(i+1)) {
+		String a = s.toLowerCase();
+		for(int i = 0; i<a.length()-1; i++) {
+			if(a.charAt(i)>a.charAt(i+1)) {
 				return false;
 			}
 		}
