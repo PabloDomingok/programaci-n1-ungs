@@ -1,0 +1,24 @@
+package practica0;
+
+public class Ejercicio26 {
+
+	public static void main(String[] args) {
+		int [] a= {23, 45, 32, 12};
+		System.out.println(esMaximo(a));
+
+	}
+	public static int esMaximo(int[] a) {
+		int b=a[0];
+		for(int i=0;i<a.length;i++) {
+			if(a[i]>b) {
+				b=a[i];
+			}
+		}
+		return b;
+		
+	}
+
+}
+
+
+
