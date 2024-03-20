@@ -6736,3 +6736,1514 @@ java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDri
 	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:527)
 	at java.base/java.lang.Thread.run(Thread.java:833)
 Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:33:36.327
+!MESSAGE Failed to save JDT index: Index for /practica0
+!STACK 0
+java.io.UTFDataFormatException
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:984)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:756)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:641)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:533)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndex(IndexManager.java:1154)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1198)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:836)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.jdt.core 4 0 2024-03-19 23:33:36.500
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index at offset 1687954 and size 1696874851
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategory(DiskIndex.java:486)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategories(DiskIndex.java:478)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:580)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1247)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1223)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:836)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:33:36.639
+!MESSAGE Failed to update meta index
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 1285 and size 301991790
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:181)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.index.Index.getMetaIndexQualifications(Index.java:259)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$MetaIndexUpdateRequest.execute(IndexManager.java:1794)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:527)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:33:36.783
+!MESSAGE Search failed for index Index for /practica0
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 2837 and size 1953063777
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:208)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.search.matching.TypeDeclarationPattern.queryIn(TypeDeclarationPattern.java:364)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2517)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2489)
+	at org.eclipse.jdt.internal.core.search.matching.MatchLocator.findIndexMatches(MatchLocator.java:306)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:238)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:212)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.lambda$0(PatternSearchJob.java:148)
+	at java.base/java.util.concurrent.ForkJoinTask$AdaptedCallable.exec(ForkJoinTask.java:1428)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:436)
+	at java.base/java.util.concurrent.ForkJoinTask.get(ForkJoinTask.java:979)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.performParallelSearch(PatternSearchJob.java:154)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.execute(PatternSearchJob.java:115)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:371)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1923)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1751)
+	at org.eclipse.jdt.core.search.SearchEngine.searchAllTypeNames(SearchEngine.java:1100)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlaysWithSearchEngine(InterfaceIndicatorLabelDecorator.java:179)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlays(InterfaceIndicatorLabelDecorator.java:142)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.decorate(InterfaceIndicatorLabelDecorator.java:125)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:257)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.queue(DecorationScheduler.java:419)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:397)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:33:36.918
+!MESSAGE Search failed for index Index for /practica0
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 2837 and size 1953063777
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:208)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.search.matching.TypeDeclarationPattern.queryIn(TypeDeclarationPattern.java:364)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2517)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2489)
+	at org.eclipse.jdt.internal.core.search.matching.MatchLocator.findIndexMatches(MatchLocator.java:306)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:238)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:212)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.lambda$0(PatternSearchJob.java:148)
+	at java.base/java.util.concurrent.ForkJoinTask$AdaptedCallable.exec(ForkJoinTask.java:1428)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:436)
+	at java.base/java.util.concurrent.ForkJoinTask.get(ForkJoinTask.java:979)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.performParallelSearch(PatternSearchJob.java:154)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.execute(PatternSearchJob.java:115)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:371)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1923)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1751)
+	at org.eclipse.jdt.core.search.SearchEngine.searchAllTypeNames(SearchEngine.java:1100)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlaysWithSearchEngine(InterfaceIndicatorLabelDecorator.java:179)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlays(InterfaceIndicatorLabelDecorator.java:142)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.decorate(InterfaceIndicatorLabelDecorator.java:125)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:257)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.queue(DecorationScheduler.java:419)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:397)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:33:37.051
+!MESSAGE Search failed for index Index for /practica0
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 2837 and size 1953063777
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:208)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.search.matching.TypeDeclarationPattern.queryIn(TypeDeclarationPattern.java:364)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2517)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2489)
+	at org.eclipse.jdt.internal.core.search.matching.MatchLocator.findIndexMatches(MatchLocator.java:306)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:238)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:212)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.lambda$0(PatternSearchJob.java:148)
+	at java.base/java.util.concurrent.ForkJoinTask$AdaptedCallable.exec(ForkJoinTask.java:1428)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:436)
+	at java.base/java.util.concurrent.ForkJoinTask.get(ForkJoinTask.java:979)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.performParallelSearch(PatternSearchJob.java:154)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.execute(PatternSearchJob.java:115)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:371)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1923)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1751)
+	at org.eclipse.jdt.core.search.SearchEngine.searchAllTypeNames(SearchEngine.java:1100)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlaysWithSearchEngine(InterfaceIndicatorLabelDecorator.java:179)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlays(InterfaceIndicatorLabelDecorator.java:142)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.decorate(InterfaceIndicatorLabelDecorator.java:125)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:257)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.queue(DecorationScheduler.java:419)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:397)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:33:37.183
+!MESSAGE Search failed for index Index for /practica0
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 2837 and size 1953063777
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:208)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.search.matching.TypeDeclarationPattern.queryIn(TypeDeclarationPattern.java:364)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2517)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2489)
+	at org.eclipse.jdt.internal.core.search.matching.MatchLocator.findIndexMatches(MatchLocator.java:306)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:238)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:212)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.lambda$0(PatternSearchJob.java:148)
+	at java.base/java.util.concurrent.ForkJoinTask$AdaptedCallable.exec(ForkJoinTask.java:1428)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:436)
+	at java.base/java.util.concurrent.ForkJoinTask.get(ForkJoinTask.java:979)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.performParallelSearch(PatternSearchJob.java:154)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.execute(PatternSearchJob.java:115)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:371)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1923)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1751)
+	at org.eclipse.jdt.core.search.SearchEngine.searchAllTypeNames(SearchEngine.java:1100)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlaysWithSearchEngine(InterfaceIndicatorLabelDecorator.java:179)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlays(InterfaceIndicatorLabelDecorator.java:142)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.decorate(InterfaceIndicatorLabelDecorator.java:125)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:257)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.queue(DecorationScheduler.java:419)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:397)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:33:37.320
+!MESSAGE Search failed for index Index for /practica0
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 2837 and size 1953063777
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:208)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.search.matching.TypeDeclarationPattern.queryIn(TypeDeclarationPattern.java:364)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2517)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2489)
+	at org.eclipse.jdt.internal.core.search.matching.MatchLocator.findIndexMatches(MatchLocator.java:306)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:238)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:212)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.lambda$0(PatternSearchJob.java:148)
+	at java.base/java.util.concurrent.ForkJoinTask$AdaptedCallable.exec(ForkJoinTask.java:1428)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:436)
+	at java.base/java.util.concurrent.ForkJoinTask.get(ForkJoinTask.java:979)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.performParallelSearch(PatternSearchJob.java:154)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.execute(PatternSearchJob.java:115)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:371)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1923)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1751)
+	at org.eclipse.jdt.core.search.SearchEngine.searchAllTypeNames(SearchEngine.java:1100)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlaysWithSearchEngine(InterfaceIndicatorLabelDecorator.java:179)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlays(InterfaceIndicatorLabelDecorator.java:142)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.decorate(InterfaceIndicatorLabelDecorator.java:125)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:257)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.queue(DecorationScheduler.java:419)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:397)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:33:37.456
+!MESSAGE Search failed for index Index for /practica0
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 2837 and size 1953063777
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:208)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.search.matching.TypeDeclarationPattern.queryIn(TypeDeclarationPattern.java:364)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2517)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2489)
+	at org.eclipse.jdt.internal.core.search.matching.MatchLocator.findIndexMatches(MatchLocator.java:306)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:238)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:212)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.lambda$0(PatternSearchJob.java:148)
+	at java.base/java.util.concurrent.ForkJoinTask$AdaptedCallable.exec(ForkJoinTask.java:1428)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:436)
+	at java.base/java.util.concurrent.ForkJoinTask.get(ForkJoinTask.java:979)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.performParallelSearch(PatternSearchJob.java:154)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.execute(PatternSearchJob.java:115)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:371)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1923)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1751)
+	at org.eclipse.jdt.core.search.SearchEngine.searchAllTypeNames(SearchEngine.java:1100)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlaysWithSearchEngine(InterfaceIndicatorLabelDecorator.java:179)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlays(InterfaceIndicatorLabelDecorator.java:142)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.decorate(InterfaceIndicatorLabelDecorator.java:125)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:257)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.queue(DecorationScheduler.java:419)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:397)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:33:37.591
+!MESSAGE Search failed for index Index for /practica0
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 2837 and size 1953063777
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:208)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.search.matching.TypeDeclarationPattern.queryIn(TypeDeclarationPattern.java:364)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2517)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2489)
+	at org.eclipse.jdt.internal.core.search.matching.MatchLocator.findIndexMatches(MatchLocator.java:306)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:238)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:212)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.lambda$0(PatternSearchJob.java:148)
+	at java.base/java.util.concurrent.ForkJoinTask$AdaptedCallable.exec(ForkJoinTask.java:1428)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:436)
+	at java.base/java.util.concurrent.ForkJoinTask.get(ForkJoinTask.java:979)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.performParallelSearch(PatternSearchJob.java:154)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.execute(PatternSearchJob.java:115)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:371)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1923)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1751)
+	at org.eclipse.jdt.core.search.SearchEngine.searchAllTypeNames(SearchEngine.java:1100)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlaysWithSearchEngine(InterfaceIndicatorLabelDecorator.java:179)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlays(InterfaceIndicatorLabelDecorator.java:142)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.decorate(InterfaceIndicatorLabelDecorator.java:125)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:257)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.queue(DecorationScheduler.java:419)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:397)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:33:37.724
+!MESSAGE Search failed for index Index for /practica0
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 2837 and size 1953063777
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:208)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.search.matching.TypeDeclarationPattern.queryIn(TypeDeclarationPattern.java:364)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2517)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2489)
+	at org.eclipse.jdt.internal.core.search.matching.MatchLocator.findIndexMatches(MatchLocator.java:306)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:238)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:212)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.lambda$0(PatternSearchJob.java:148)
+	at java.base/java.util.concurrent.ForkJoinTask$AdaptedCallable.exec(ForkJoinTask.java:1428)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:436)
+	at java.base/java.util.concurrent.ForkJoinTask.get(ForkJoinTask.java:979)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.performParallelSearch(PatternSearchJob.java:154)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.execute(PatternSearchJob.java:115)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:371)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1923)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1751)
+	at org.eclipse.jdt.core.search.SearchEngine.searchAllTypeNames(SearchEngine.java:1100)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlaysWithSearchEngine(InterfaceIndicatorLabelDecorator.java:179)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlays(InterfaceIndicatorLabelDecorator.java:142)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.decorate(InterfaceIndicatorLabelDecorator.java:125)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:257)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.queue(DecorationScheduler.java:419)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:397)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:33:37.858
+!MESSAGE Search failed for index Index for /practica0
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 2837 and size 1953063777
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:208)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.search.matching.TypeDeclarationPattern.queryIn(TypeDeclarationPattern.java:364)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2517)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2489)
+	at org.eclipse.jdt.internal.core.search.matching.MatchLocator.findIndexMatches(MatchLocator.java:306)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:238)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:212)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.lambda$0(PatternSearchJob.java:148)
+	at java.base/java.util.concurrent.ForkJoinTask$AdaptedCallable.exec(ForkJoinTask.java:1428)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:436)
+	at java.base/java.util.concurrent.ForkJoinTask.get(ForkJoinTask.java:979)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.performParallelSearch(PatternSearchJob.java:154)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.execute(PatternSearchJob.java:115)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:371)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1923)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1751)
+	at org.eclipse.jdt.core.search.SearchEngine.searchAllTypeNames(SearchEngine.java:1100)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlaysWithSearchEngine(InterfaceIndicatorLabelDecorator.java:179)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlays(InterfaceIndicatorLabelDecorator.java:142)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.decorate(InterfaceIndicatorLabelDecorator.java:125)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:257)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.queue(DecorationScheduler.java:419)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:397)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:33:37.993
+!MESSAGE Search failed for index Index for /practica0
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 2837 and size 1953063777
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:208)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.search.matching.TypeDeclarationPattern.queryIn(TypeDeclarationPattern.java:364)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2517)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2489)
+	at org.eclipse.jdt.internal.core.search.matching.MatchLocator.findIndexMatches(MatchLocator.java:306)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:238)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:212)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.lambda$0(PatternSearchJob.java:148)
+	at java.base/java.util.concurrent.ForkJoinTask$AdaptedCallable.exec(ForkJoinTask.java:1428)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:436)
+	at java.base/java.util.concurrent.ForkJoinTask.get(ForkJoinTask.java:979)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.performParallelSearch(PatternSearchJob.java:154)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.execute(PatternSearchJob.java:115)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:371)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1923)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1751)
+	at org.eclipse.jdt.core.search.SearchEngine.searchAllTypeNames(SearchEngine.java:1100)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlaysWithSearchEngine(InterfaceIndicatorLabelDecorator.java:179)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlays(InterfaceIndicatorLabelDecorator.java:142)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.decorate(InterfaceIndicatorLabelDecorator.java:125)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:257)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.queue(DecorationScheduler.java:419)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:397)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:33:38.128
+!MESSAGE Search failed for index Index for /practica0
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 2837 and size 1953063777
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:208)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.search.matching.TypeDeclarationPattern.queryIn(TypeDeclarationPattern.java:364)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2517)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2489)
+	at org.eclipse.jdt.internal.core.search.matching.MatchLocator.findIndexMatches(MatchLocator.java:306)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:238)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:212)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.lambda$0(PatternSearchJob.java:148)
+	at java.base/java.util.concurrent.ForkJoinTask$AdaptedCallable.exec(ForkJoinTask.java:1428)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:436)
+	at java.base/java.util.concurrent.ForkJoinTask.get(ForkJoinTask.java:979)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.performParallelSearch(PatternSearchJob.java:154)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.execute(PatternSearchJob.java:115)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:371)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1923)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1751)
+	at org.eclipse.jdt.core.search.SearchEngine.searchAllTypeNames(SearchEngine.java:1100)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlaysWithSearchEngine(InterfaceIndicatorLabelDecorator.java:179)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlays(InterfaceIndicatorLabelDecorator.java:142)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.decorate(InterfaceIndicatorLabelDecorator.java:125)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:257)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.queue(DecorationScheduler.java:419)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:397)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:33:38.261
+!MESSAGE Search failed for index Index for /practica0
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 2837 and size 1953063777
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:208)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.search.matching.TypeDeclarationPattern.queryIn(TypeDeclarationPattern.java:364)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2517)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2489)
+	at org.eclipse.jdt.internal.core.search.matching.MatchLocator.findIndexMatches(MatchLocator.java:306)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:238)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:212)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.lambda$0(PatternSearchJob.java:148)
+	at java.base/java.util.concurrent.ForkJoinTask$AdaptedCallable.exec(ForkJoinTask.java:1428)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:436)
+	at java.base/java.util.concurrent.ForkJoinTask.get(ForkJoinTask.java:979)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.performParallelSearch(PatternSearchJob.java:154)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.execute(PatternSearchJob.java:115)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:371)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1923)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1751)
+	at org.eclipse.jdt.core.search.SearchEngine.searchAllTypeNames(SearchEngine.java:1100)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlaysWithSearchEngine(InterfaceIndicatorLabelDecorator.java:179)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlays(InterfaceIndicatorLabelDecorator.java:142)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.decorate(InterfaceIndicatorLabelDecorator.java:125)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:257)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.queue(DecorationScheduler.java:419)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:397)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:33:38.393
+!MESSAGE Search failed for index Index for /practica0
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 2837 and size 1953063777
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:208)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.search.matching.TypeDeclarationPattern.queryIn(TypeDeclarationPattern.java:364)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2517)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2489)
+	at org.eclipse.jdt.internal.core.search.matching.MatchLocator.findIndexMatches(MatchLocator.java:306)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:238)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:212)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.lambda$0(PatternSearchJob.java:148)
+	at java.base/java.util.concurrent.ForkJoinTask$AdaptedCallable.exec(ForkJoinTask.java:1428)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:436)
+	at java.base/java.util.concurrent.ForkJoinTask.get(ForkJoinTask.java:979)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.performParallelSearch(PatternSearchJob.java:154)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.execute(PatternSearchJob.java:115)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:371)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1923)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1751)
+	at org.eclipse.jdt.core.search.SearchEngine.searchAllTypeNames(SearchEngine.java:1100)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlaysWithSearchEngine(InterfaceIndicatorLabelDecorator.java:179)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlays(InterfaceIndicatorLabelDecorator.java:142)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.decorate(InterfaceIndicatorLabelDecorator.java:125)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:257)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.queue(DecorationScheduler.java:419)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:397)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:33:38.529
+!MESSAGE Search failed for index Index for /practica0
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 2837 and size 1953063777
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:208)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.search.matching.TypeDeclarationPattern.queryIn(TypeDeclarationPattern.java:364)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2517)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2489)
+	at org.eclipse.jdt.internal.core.search.matching.MatchLocator.findIndexMatches(MatchLocator.java:306)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:238)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:212)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.lambda$0(PatternSearchJob.java:148)
+	at java.base/java.util.concurrent.ForkJoinTask$AdaptedCallable.exec(ForkJoinTask.java:1428)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:436)
+	at java.base/java.util.concurrent.ForkJoinTask.get(ForkJoinTask.java:979)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.performParallelSearch(PatternSearchJob.java:154)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.execute(PatternSearchJob.java:115)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:371)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1923)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1751)
+	at org.eclipse.jdt.core.search.SearchEngine.searchAllTypeNames(SearchEngine.java:1100)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlaysWithSearchEngine(InterfaceIndicatorLabelDecorator.java:179)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlays(InterfaceIndicatorLabelDecorator.java:142)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.decorate(InterfaceIndicatorLabelDecorator.java:125)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:257)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.queue(DecorationScheduler.java:419)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:397)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:33:38.664
+!MESSAGE Search failed for index Index for /practica0
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 2837 and size 1953063777
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:208)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.search.matching.TypeDeclarationPattern.queryIn(TypeDeclarationPattern.java:364)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2517)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2489)
+	at org.eclipse.jdt.internal.core.search.matching.MatchLocator.findIndexMatches(MatchLocator.java:306)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:238)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:212)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.lambda$0(PatternSearchJob.java:148)
+	at java.base/java.util.concurrent.ForkJoinTask$AdaptedCallable.exec(ForkJoinTask.java:1428)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:436)
+	at java.base/java.util.concurrent.ForkJoinTask.get(ForkJoinTask.java:979)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.performParallelSearch(PatternSearchJob.java:154)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.execute(PatternSearchJob.java:115)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:371)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1923)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1751)
+	at org.eclipse.jdt.core.search.SearchEngine.searchAllTypeNames(SearchEngine.java:1100)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlaysWithSearchEngine(InterfaceIndicatorLabelDecorator.java:179)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlays(InterfaceIndicatorLabelDecorator.java:142)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.decorate(InterfaceIndicatorLabelDecorator.java:125)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:257)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.queue(DecorationScheduler.java:419)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:397)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:33:38.799
+!MESSAGE Search failed for index Index for /practica0
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 2837 and size 1953063777
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:208)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.search.matching.TypeDeclarationPattern.queryIn(TypeDeclarationPattern.java:364)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2517)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2489)
+	at org.eclipse.jdt.internal.core.search.matching.MatchLocator.findIndexMatches(MatchLocator.java:306)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:238)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:212)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.lambda$0(PatternSearchJob.java:148)
+	at java.base/java.util.concurrent.ForkJoinTask$AdaptedCallable.exec(ForkJoinTask.java:1428)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:436)
+	at java.base/java.util.concurrent.ForkJoinTask.get(ForkJoinTask.java:979)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.performParallelSearch(PatternSearchJob.java:154)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.execute(PatternSearchJob.java:115)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:371)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1923)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1751)
+	at org.eclipse.jdt.core.search.SearchEngine.searchAllTypeNames(SearchEngine.java:1100)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlaysWithSearchEngine(InterfaceIndicatorLabelDecorator.java:179)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlays(InterfaceIndicatorLabelDecorator.java:142)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.decorate(InterfaceIndicatorLabelDecorator.java:125)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:257)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.queue(DecorationScheduler.java:419)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:397)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:33:38.932
+!MESSAGE Search failed for index Index for /practica0
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 2837 and size 1953063777
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:208)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.search.matching.TypeDeclarationPattern.queryIn(TypeDeclarationPattern.java:364)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2517)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2489)
+	at org.eclipse.jdt.internal.core.search.matching.MatchLocator.findIndexMatches(MatchLocator.java:306)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:238)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:212)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.lambda$0(PatternSearchJob.java:148)
+	at java.base/java.util.concurrent.ForkJoinTask$AdaptedCallable.exec(ForkJoinTask.java:1428)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:436)
+	at java.base/java.util.concurrent.ForkJoinTask.get(ForkJoinTask.java:979)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.performParallelSearch(PatternSearchJob.java:154)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.execute(PatternSearchJob.java:115)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:371)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1923)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1751)
+	at org.eclipse.jdt.core.search.SearchEngine.searchAllTypeNames(SearchEngine.java:1100)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlaysWithSearchEngine(InterfaceIndicatorLabelDecorator.java:179)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlays(InterfaceIndicatorLabelDecorator.java:142)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.decorate(InterfaceIndicatorLabelDecorator.java:125)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:257)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.queue(DecorationScheduler.java:419)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:397)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:33:39.068
+!MESSAGE Search failed for index Index for /practica0
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 2837 and size 1953063777
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:208)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.search.matching.TypeDeclarationPattern.queryIn(TypeDeclarationPattern.java:364)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2517)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2489)
+	at org.eclipse.jdt.internal.core.search.matching.MatchLocator.findIndexMatches(MatchLocator.java:306)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:238)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:212)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.lambda$0(PatternSearchJob.java:148)
+	at java.base/java.util.concurrent.ForkJoinTask$AdaptedCallable.exec(ForkJoinTask.java:1428)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:436)
+	at java.base/java.util.concurrent.ForkJoinTask.get(ForkJoinTask.java:979)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.performParallelSearch(PatternSearchJob.java:154)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.execute(PatternSearchJob.java:115)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:371)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1923)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1751)
+	at org.eclipse.jdt.core.search.SearchEngine.searchAllTypeNames(SearchEngine.java:1100)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlaysWithSearchEngine(InterfaceIndicatorLabelDecorator.java:179)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlays(InterfaceIndicatorLabelDecorator.java:142)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.decorate(InterfaceIndicatorLabelDecorator.java:125)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:257)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.queue(DecorationScheduler.java:419)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:397)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:33:39.203
+!MESSAGE Search failed for index Index for /practica0
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 2837 and size 1953063777
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:208)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.search.matching.TypeDeclarationPattern.queryIn(TypeDeclarationPattern.java:364)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2517)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2489)
+	at org.eclipse.jdt.internal.core.search.matching.MatchLocator.findIndexMatches(MatchLocator.java:306)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:238)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:212)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.lambda$0(PatternSearchJob.java:148)
+	at java.base/java.util.concurrent.ForkJoinTask$AdaptedCallable.exec(ForkJoinTask.java:1428)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:436)
+	at java.base/java.util.concurrent.ForkJoinTask.get(ForkJoinTask.java:979)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.performParallelSearch(PatternSearchJob.java:154)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.execute(PatternSearchJob.java:115)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:371)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1923)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1751)
+	at org.eclipse.jdt.core.search.SearchEngine.searchAllTypeNames(SearchEngine.java:1100)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlaysWithSearchEngine(InterfaceIndicatorLabelDecorator.java:179)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlays(InterfaceIndicatorLabelDecorator.java:142)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.decorate(InterfaceIndicatorLabelDecorator.java:125)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:257)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.queue(DecorationScheduler.java:419)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:397)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:33:39.338
+!MESSAGE Search failed for index Index for /practica0
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 2837 and size 1953063777
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:208)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.search.matching.TypeDeclarationPattern.queryIn(TypeDeclarationPattern.java:364)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2517)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2489)
+	at org.eclipse.jdt.internal.core.search.matching.MatchLocator.findIndexMatches(MatchLocator.java:306)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:238)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:212)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.lambda$0(PatternSearchJob.java:148)
+	at java.base/java.util.concurrent.ForkJoinTask$AdaptedCallable.exec(ForkJoinTask.java:1428)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:436)
+	at java.base/java.util.concurrent.ForkJoinTask.get(ForkJoinTask.java:979)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.performParallelSearch(PatternSearchJob.java:154)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.execute(PatternSearchJob.java:115)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:371)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1923)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1751)
+	at org.eclipse.jdt.core.search.SearchEngine.searchAllTypeNames(SearchEngine.java:1100)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlaysWithSearchEngine(InterfaceIndicatorLabelDecorator.java:179)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlays(InterfaceIndicatorLabelDecorator.java:142)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.decorate(InterfaceIndicatorLabelDecorator.java:125)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:257)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.queue(DecorationScheduler.java:419)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:397)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:33:39.471
+!MESSAGE Search failed for index Index for /practica0
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 2837 and size 1953063777
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:208)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.search.matching.TypeDeclarationPattern.queryIn(TypeDeclarationPattern.java:364)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2517)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2489)
+	at org.eclipse.jdt.internal.core.search.matching.MatchLocator.findIndexMatches(MatchLocator.java:306)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:238)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:212)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.lambda$0(PatternSearchJob.java:148)
+	at java.base/java.util.concurrent.ForkJoinTask$AdaptedCallable.exec(ForkJoinTask.java:1428)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:436)
+	at java.base/java.util.concurrent.ForkJoinTask.get(ForkJoinTask.java:979)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.performParallelSearch(PatternSearchJob.java:154)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.execute(PatternSearchJob.java:115)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:371)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1923)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1751)
+	at org.eclipse.jdt.core.search.SearchEngine.searchAllTypeNames(SearchEngine.java:1100)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlaysWithSearchEngine(InterfaceIndicatorLabelDecorator.java:179)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.addOverlays(InterfaceIndicatorLabelDecorator.java:142)
+	at org.eclipse.jdt.internal.ui.InterfaceIndicatorLabelDecorator.decorate(InterfaceIndicatorLabelDecorator.java:125)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:257)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.queue(DecorationScheduler.java:419)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:397)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:42:43.341
+!MESSAGE Search failed for index Index for /practica0
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 2837 and size 1953063777
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:239)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.search.matching.TypeDeclarationPattern.queryIn(TypeDeclarationPattern.java:364)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2517)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2489)
+	at org.eclipse.jdt.internal.core.search.matching.MatchLocator.findIndexMatches(MatchLocator.java:306)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:238)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:212)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.lambda$0(PatternSearchJob.java:148)
+	at java.base/java.util.concurrent.ForkJoinTask$AdaptedCallable.exec(ForkJoinTask.java:1428)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:436)
+	at java.base/java.util.concurrent.ForkJoinTask.get(ForkJoinTask.java:979)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.performParallelSearch(PatternSearchJob.java:154)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.execute(PatternSearchJob.java:115)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:371)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1923)
+	at org.eclipse.jdt.internal.core.SearchableEnvironment.findTypes(SearchableEnvironment.java:703)
+	at org.eclipse.jdt.internal.codeassist.CompletionEngine.findTypesAndPackages(CompletionEngine.java:11933)
+	at org.eclipse.jdt.internal.codeassist.CompletionEngine.completionOnSingleNameReference(CompletionEngine.java:4037)
+	at org.eclipse.jdt.internal.codeassist.CompletionEngine.complete(CompletionEngine.java:2018)
+	at org.eclipse.jdt.internal.codeassist.CompletionEngine.complete(CompletionEngine.java:2359)
+	at org.eclipse.jdt.internal.core.Openable.codeComplete(Openable.java:136)
+	at org.eclipse.jdt.internal.core.CompilationUnit.codeComplete(CompilationUnit.java:367)
+	at org.eclipse.jdt.internal.core.CompilationUnit.codeComplete(CompilationUnit.java:357)
+	at org.eclipse.jdt.internal.ui.text.java.JavaCompletionProposalComputer.internalComputeCompletionProposals(JavaCompletionProposalComputer.java:256)
+	at org.eclipse.jdt.internal.ui.text.java.JavaCompletionProposalComputer.computeCompletionProposals(JavaCompletionProposalComputer.java:218)
+	at org.eclipse.jdt.internal.ui.text.java.JavaTypeCompletionProposalComputer.computeCompletionProposals(JavaTypeCompletionProposalComputer.java:65)
+	at org.eclipse.mylyn.internal.java.ui.editor.FocusedJavaAllProposalComputer.computeCompletionProposals(FocusedJavaAllProposalComputer.java:42)
+	at org.eclipse.jdt.internal.ui.text.java.CompletionProposalComputerDescriptor.computeCompletionProposals(CompletionProposalComputerDescriptor.java:348)
+	at org.eclipse.jdt.internal.ui.text.java.CompletionProposalCategory.computeCompletionProposals(CompletionProposalCategory.java:340)
+	at org.eclipse.jdt.internal.ui.text.java.ContentAssistProcessor.collectProposals(ContentAssistProcessor.java:333)
+	at org.eclipse.jdt.internal.ui.text.java.ContentAssistProcessor.computeCompletionProposals(ContentAssistProcessor.java:289)
+	at org.eclipse.jface.text.contentassist.AsyncCompletionProposalPopup.lambda$10(AsyncCompletionProposalPopup.java:378)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jface.text.contentassist.AsyncCompletionProposalPopup.lambda$9(AsyncCompletionProposalPopup.java:377)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:42:51.115
+!MESSAGE Search failed for index Index for /practica0
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 2837 and size 1953063777
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:239)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.search.matching.TypeDeclarationPattern.queryIn(TypeDeclarationPattern.java:364)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2517)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2489)
+	at org.eclipse.jdt.internal.core.search.matching.MatchLocator.findIndexMatches(MatchLocator.java:306)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:238)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:212)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.lambda$0(PatternSearchJob.java:148)
+	at java.base/java.util.concurrent.ForkJoinTask$AdaptedCallable.exec(ForkJoinTask.java:1428)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:436)
+	at java.base/java.util.concurrent.ForkJoinTask.get(ForkJoinTask.java:979)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.performParallelSearch(PatternSearchJob.java:154)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.execute(PatternSearchJob.java:115)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:371)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1923)
+	at org.eclipse.jdt.internal.core.SearchableEnvironment.findTypes(SearchableEnvironment.java:703)
+	at org.eclipse.jdt.internal.codeassist.CompletionEngine.findTypesAndPackages(CompletionEngine.java:11933)
+	at org.eclipse.jdt.internal.codeassist.CompletionEngine.completionOnSingleNameReference(CompletionEngine.java:4037)
+	at org.eclipse.jdt.internal.codeassist.CompletionEngine.complete(CompletionEngine.java:2018)
+	at org.eclipse.jdt.internal.codeassist.CompletionEngine.complete(CompletionEngine.java:2359)
+	at org.eclipse.jdt.internal.core.Openable.codeComplete(Openable.java:136)
+	at org.eclipse.jdt.internal.core.CompilationUnit.codeComplete(CompilationUnit.java:367)
+	at org.eclipse.jdt.internal.core.CompilationUnit.codeComplete(CompilationUnit.java:357)
+	at org.eclipse.jdt.internal.ui.text.java.JavaCompletionProposalComputer.internalComputeCompletionProposals(JavaCompletionProposalComputer.java:256)
+	at org.eclipse.jdt.internal.ui.text.java.JavaCompletionProposalComputer.computeCompletionProposals(JavaCompletionProposalComputer.java:218)
+	at org.eclipse.jdt.internal.ui.text.java.JavaTypeCompletionProposalComputer.computeCompletionProposals(JavaTypeCompletionProposalComputer.java:65)
+	at org.eclipse.mylyn.internal.java.ui.editor.FocusedJavaAllProposalComputer.computeCompletionProposals(FocusedJavaAllProposalComputer.java:42)
+	at org.eclipse.jdt.internal.ui.text.java.CompletionProposalComputerDescriptor.computeCompletionProposals(CompletionProposalComputerDescriptor.java:348)
+	at org.eclipse.jdt.internal.ui.text.java.CompletionProposalCategory.computeCompletionProposals(CompletionProposalCategory.java:340)
+	at org.eclipse.jdt.internal.ui.text.java.ContentAssistProcessor.collectProposals(ContentAssistProcessor.java:333)
+	at org.eclipse.jdt.internal.ui.text.java.ContentAssistProcessor.computeCompletionProposals(ContentAssistProcessor.java:289)
+	at org.eclipse.jface.text.contentassist.AsyncCompletionProposalPopup.lambda$10(AsyncCompletionProposalPopup.java:378)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jface.text.contentassist.AsyncCompletionProposalPopup.lambda$9(AsyncCompletionProposalPopup.java:377)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:42:55.298
+!MESSAGE Search failed for index Index for /practica0
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 4237 and size 1630482943
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:199)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.search.matching.MethodPattern.queryIn(MethodPattern.java:363)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2517)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2489)
+	at org.eclipse.jdt.internal.core.search.matching.MatchLocator.findIndexMatches(MatchLocator.java:306)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:238)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:212)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.lambda$0(PatternSearchJob.java:148)
+	at java.base/java.util.concurrent.ForkJoinTask$AdaptedCallable.exec(ForkJoinTask.java:1428)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:436)
+	at java.base/java.util.concurrent.ForkJoinTask.get(ForkJoinTask.java:979)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.performParallelSearch(PatternSearchJob.java:154)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.execute(PatternSearchJob.java:115)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:371)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.findMatches(BasicSearchEngine.java:235)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.search(BasicSearchEngine.java:602)
+	at org.eclipse.jdt.core.search.SearchEngine.search(SearchEngine.java:670)
+	at org.eclipse.jdt.internal.debug.ui.launcher.MainMethodSearchEngine.searchMainMethods(MainMethodSearchEngine.java:98)
+	at org.eclipse.jdt.internal.debug.ui.launcher.MainMethodSearchEngine$1.run(MainMethodSearchEngine.java:167)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 0 2024-03-19 23:42:55.477
+!MESSAGE Error filtering index locations based on qualifier.
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index at offset 1687954 and size 1696874851
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:199)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.query(MetaIndex.java:63)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.runQuery(IndexManager.java:1627)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.findMatchingIndexNames(IndexManager.java:1593)
+	at org.eclipse.jdt.internal.core.search.IndexSelector.getIndexLocations(IndexSelector.java:319)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.selectIndexURLs(JavaSearchParticipant.java:160)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.getIndexes(PatternSearchJob.java:186)
+	at org.eclipse.jdt.internal.core.search.SubTypeSearchJob.getIndexes(SubTypeSearchJob.java:47)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.ensureReadyToRun(PatternSearchJob.java:99)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:262)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.legacySearchAllPossibleSubTypes(IndexBasedHierarchyBuilder.java:590)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.searchAllPossibleSubTypes(IndexBasedHierarchyBuilder.java:491)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.determinePossibleSubTypes(IndexBasedHierarchyBuilder.java:450)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.build(IndexBasedHierarchyBuilder.java:148)
+	at org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.compute(TypeHierarchy.java:323)
+	at org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.refresh(TypeHierarchy.java:1319)
+	at org.eclipse.jdt.internal.core.CreateTypeHierarchyOperation.executeOperation(CreateTypeHierarchyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.SourceType.newTypeHierarchy(SourceType.java:950)
+	at org.eclipse.jdt.internal.core.SourceType.newTypeHierarchy(SourceType.java:907)
+	at org.eclipse.jdt.internal.debug.ui.launcher.MainMethodSearchEngine.addSubtypes(MainMethodSearchEngine.java:130)
+	at org.eclipse.jdt.internal.debug.ui.launcher.MainMethodSearchEngine.searchMainMethods(MainMethodSearchEngine.java:107)
+	at org.eclipse.jdt.internal.debug.ui.launcher.MainMethodSearchEngine$1.run(MainMethodSearchEngine.java:167)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 0 2024-03-19 23:42:55.630
+!MESSAGE Error filtering index locations based on qualifier.
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index at offset 1687954 and size 1696874851
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:199)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.query(MetaIndex.java:63)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.runQuery(IndexManager.java:1627)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.findMatchingIndexNames(IndexManager.java:1593)
+	at org.eclipse.jdt.internal.core.search.IndexSelector.getIndexLocations(IndexSelector.java:319)
+	at org.eclipse.jdt.internal.core.search.JavaSearchParticipant.selectIndexURLs(JavaSearchParticipant.java:160)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.getIndexes(PatternSearchJob.java:186)
+	at org.eclipse.jdt.internal.core.search.SubTypeSearchJob.getIndexes(SubTypeSearchJob.java:47)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.execute(PatternSearchJob.java:109)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:371)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.legacySearchAllPossibleSubTypes(IndexBasedHierarchyBuilder.java:590)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.searchAllPossibleSubTypes(IndexBasedHierarchyBuilder.java:491)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.determinePossibleSubTypes(IndexBasedHierarchyBuilder.java:450)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.build(IndexBasedHierarchyBuilder.java:148)
+	at org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.compute(TypeHierarchy.java:323)
+	at org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.refresh(TypeHierarchy.java:1319)
+	at org.eclipse.jdt.internal.core.CreateTypeHierarchyOperation.executeOperation(CreateTypeHierarchyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.SourceType.newTypeHierarchy(SourceType.java:950)
+	at org.eclipse.jdt.internal.core.SourceType.newTypeHierarchy(SourceType.java:907)
+	at org.eclipse.jdt.internal.debug.ui.launcher.MainMethodSearchEngine.addSubtypes(MainMethodSearchEngine.java:130)
+	at org.eclipse.jdt.internal.debug.ui.launcher.MainMethodSearchEngine.searchMainMethods(MainMethodSearchEngine.java:107)
+	at org.eclipse.jdt.internal.debug.ui.launcher.MainMethodSearchEngine$1.run(MainMethodSearchEngine.java:167)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:42:55.770
+!MESSAGE Search failed for index Index for /practica0
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 1850 and size 1667313711
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:208)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.search.matching.SuperTypeReferencePattern.queryIn(SuperTypeReferencePattern.java:280)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2517)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2489)
+	at org.eclipse.jdt.internal.core.search.matching.MatchLocator.findIndexMatches(MatchLocator.java:306)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:238)
+	at org.eclipse.jdt.internal.core.search.SubTypeSearchJob.search(SubTypeSearchJob.java:63)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:212)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.lambda$0(PatternSearchJob.java:148)
+	at java.base/java.util.concurrent.ForkJoinTask$AdaptedCallable.exec(ForkJoinTask.java:1428)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:436)
+	at java.base/java.util.concurrent.ForkJoinTask.get(ForkJoinTask.java:979)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.performParallelSearch(PatternSearchJob.java:154)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.execute(PatternSearchJob.java:115)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:371)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.legacySearchAllPossibleSubTypes(IndexBasedHierarchyBuilder.java:590)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.searchAllPossibleSubTypes(IndexBasedHierarchyBuilder.java:491)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.determinePossibleSubTypes(IndexBasedHierarchyBuilder.java:450)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.build(IndexBasedHierarchyBuilder.java:148)
+	at org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.compute(TypeHierarchy.java:323)
+	at org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.refresh(TypeHierarchy.java:1319)
+	at org.eclipse.jdt.internal.core.CreateTypeHierarchyOperation.executeOperation(CreateTypeHierarchyOperation.java:94)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.SourceType.newTypeHierarchy(SourceType.java:950)
+	at org.eclipse.jdt.internal.core.SourceType.newTypeHierarchy(SourceType.java:907)
+	at org.eclipse.jdt.internal.debug.ui.launcher.MainMethodSearchEngine.addSubtypes(MainMethodSearchEngine.java:130)
+	at org.eclipse.jdt.internal.debug.ui.launcher.MainMethodSearchEngine.searchMainMethods(MainMethodSearchEngine.java:107)
+	at org.eclipse.jdt.internal.debug.ui.launcher.MainMethodSearchEngine$1.run(MainMethodSearchEngine.java:167)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:42:56.647
+!MESSAGE Failed to save JDT index: Index for /practica0
+!STACK 0
+java.io.UTFDataFormatException
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:984)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:756)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:641)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:533)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndex(IndexManager.java:1154)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1198)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:836)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.jdt.core 4 0 2024-03-19 23:42:56.836
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index at offset 1687954 and size 1696874851
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategory(DiskIndex.java:486)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategories(DiskIndex.java:478)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:580)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1247)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1223)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:836)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:42:56.981
+!MESSAGE Failed to update meta index
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 1285 and size 301991790
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:181)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.index.Index.getMetaIndexQualifications(Index.java:259)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$MetaIndexUpdateRequest.execute(IndexManager.java:1794)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:527)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:43:30.931
+!MESSAGE Failed to save JDT index: Index for /practica0
+!STACK 0
+java.io.UTFDataFormatException
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:984)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:756)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:641)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:533)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndex(IndexManager.java:1154)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1198)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:836)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.jdt.core 4 0 2024-03-19 23:43:31.134
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index at offset 1687954 and size 1696874851
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategory(DiskIndex.java:486)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategories(DiskIndex.java:478)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:580)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1247)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1223)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:836)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:43:31.280
+!MESSAGE Failed to update meta index
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 1285 and size 301991790
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:181)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.index.Index.getMetaIndexQualifications(Index.java:259)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$MetaIndexUpdateRequest.execute(IndexManager.java:1794)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:527)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:43:42.481
+!MESSAGE Failed to save JDT index: Index for /practica0
+!STACK 0
+java.io.UTFDataFormatException
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:984)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:756)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:641)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:533)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndex(IndexManager.java:1154)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1198)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:836)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.jdt.core 4 0 2024-03-19 23:43:42.659
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index at offset 1687954 and size 1696874851
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategory(DiskIndex.java:486)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategories(DiskIndex.java:478)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:580)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1247)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1223)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:836)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:43:42.800
+!MESSAGE Failed to update meta index
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 1285 and size 301991790
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:181)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.index.Index.getMetaIndexQualifications(Index.java:259)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$MetaIndexUpdateRequest.execute(IndexManager.java:1794)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:527)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:44:06.980
+!MESSAGE Failed to save JDT index: Index for /practica0
+!STACK 0
+java.io.UTFDataFormatException
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:984)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:756)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:641)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:533)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndex(IndexManager.java:1154)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1198)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:836)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.jdt.core 4 0 2024-03-19 23:44:07.176
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index at offset 1687954 and size 1696874851
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategory(DiskIndex.java:486)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategories(DiskIndex.java:478)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:580)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1247)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1223)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:836)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:44:07.321
+!MESSAGE Failed to update meta index
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 1285 and size 301991790
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:181)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.index.Index.getMetaIndexQualifications(Index.java:259)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$MetaIndexUpdateRequest.execute(IndexManager.java:1794)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:527)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:44:14.515
+!MESSAGE Failed to save JDT index: Index for /practica0
+!STACK 0
+java.io.UTFDataFormatException
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:984)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:756)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:641)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:533)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndex(IndexManager.java:1154)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1198)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:836)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.jdt.core 4 0 2024-03-19 23:44:14.703
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index at offset 1687954 and size 1696874851
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategory(DiskIndex.java:486)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategories(DiskIndex.java:478)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:580)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1247)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1223)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:836)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:44:14.851
+!MESSAGE Failed to update meta index
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 1285 and size 301991790
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:181)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.index.Index.getMetaIndexQualifications(Index.java:259)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$MetaIndexUpdateRequest.execute(IndexManager.java:1794)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:527)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:45:38.117
+!MESSAGE Search failed for index Index for /practica0
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 2837 and size 1953063777
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:239)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.search.matching.TypeDeclarationPattern.queryIn(TypeDeclarationPattern.java:364)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2517)
+	at org.eclipse.jdt.core.search.SearchPattern.findIndexMatches(SearchPattern.java:2489)
+	at org.eclipse.jdt.internal.core.search.matching.MatchLocator.findIndexMatches(MatchLocator.java:306)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:238)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.search(PatternSearchJob.java:212)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.lambda$0(PatternSearchJob.java:148)
+	at java.base/java.util.concurrent.ForkJoinTask$AdaptedCallable.exec(ForkJoinTask.java:1428)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:436)
+	at java.base/java.util.concurrent.ForkJoinTask.get(ForkJoinTask.java:979)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.performParallelSearch(PatternSearchJob.java:154)
+	at org.eclipse.jdt.internal.core.search.PatternSearchJob.execute(PatternSearchJob.java:115)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.performConcurrentJob(JobManager.java:371)
+	at org.eclipse.jdt.internal.core.search.BasicSearchEngine.searchAllTypeNames(BasicSearchEngine.java:1923)
+	at org.eclipse.jdt.internal.core.SearchableEnvironment.findTypes(SearchableEnvironment.java:703)
+	at org.eclipse.jdt.internal.codeassist.CompletionEngine.findTypesAndPackages(CompletionEngine.java:11933)
+	at org.eclipse.jdt.internal.codeassist.CompletionEngine.completionOnSingleNameReference(CompletionEngine.java:4037)
+	at org.eclipse.jdt.internal.codeassist.CompletionEngine.complete(CompletionEngine.java:2018)
+	at org.eclipse.jdt.internal.codeassist.CompletionEngine.complete(CompletionEngine.java:2359)
+	at org.eclipse.jdt.internal.core.Openable.codeComplete(Openable.java:136)
+	at org.eclipse.jdt.internal.core.CompilationUnit.codeComplete(CompilationUnit.java:367)
+	at org.eclipse.jdt.internal.core.CompilationUnit.codeComplete(CompilationUnit.java:357)
+	at org.eclipse.jdt.internal.ui.text.java.JavaCompletionProposalComputer.internalComputeCompletionProposals(JavaCompletionProposalComputer.java:256)
+	at org.eclipse.jdt.internal.ui.text.java.JavaCompletionProposalComputer.computeCompletionProposals(JavaCompletionProposalComputer.java:218)
+	at org.eclipse.jdt.internal.ui.text.java.JavaTypeCompletionProposalComputer.computeCompletionProposals(JavaTypeCompletionProposalComputer.java:65)
+	at org.eclipse.mylyn.internal.java.ui.editor.FocusedJavaAllProposalComputer.computeCompletionProposals(FocusedJavaAllProposalComputer.java:42)
+	at org.eclipse.jdt.internal.ui.text.java.CompletionProposalComputerDescriptor.computeCompletionProposals(CompletionProposalComputerDescriptor.java:348)
+	at org.eclipse.jdt.internal.ui.text.java.CompletionProposalCategory.computeCompletionProposals(CompletionProposalCategory.java:340)
+	at org.eclipse.jdt.internal.ui.text.java.ContentAssistProcessor.collectProposals(ContentAssistProcessor.java:333)
+	at org.eclipse.jdt.internal.ui.text.java.ContentAssistProcessor.computeCompletionProposals(ContentAssistProcessor.java:289)
+	at org.eclipse.jface.text.contentassist.AsyncCompletionProposalPopup.lambda$10(AsyncCompletionProposalPopup.java:378)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jface.text.contentassist.AsyncCompletionProposalPopup.lambda$9(AsyncCompletionProposalPopup.java:377)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:45:43.744
+!MESSAGE Failed to save JDT index: Index for /practica0
+!STACK 0
+java.io.UTFDataFormatException
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:984)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:756)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:641)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:533)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndex(IndexManager.java:1154)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1198)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:836)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.jdt.core 4 0 2024-03-19 23:45:43.923
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index at offset 1687954 and size 1696874851
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategory(DiskIndex.java:486)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategories(DiskIndex.java:478)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:580)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1247)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1223)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:836)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:45:44.065
+!MESSAGE Failed to update meta index
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 1285 and size 301991790
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:181)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.index.Index.getMetaIndexQualifications(Index.java:259)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$MetaIndexUpdateRequest.execute(IndexManager.java:1794)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:527)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:45:56.167
+!MESSAGE Failed to save JDT index: Index for /practica0
+!STACK 0
+java.io.UTFDataFormatException
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:984)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:756)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:641)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:533)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndex(IndexManager.java:1154)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1198)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:836)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.jdt.core 4 0 2024-03-19 23:45:56.338
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index at offset 1687954 and size 1696874851
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategory(DiskIndex.java:486)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategories(DiskIndex.java:478)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:580)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1247)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1223)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:836)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:45:56.480
+!MESSAGE Failed to update meta index
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 1285 and size 301991790
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:181)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.index.Index.getMetaIndexQualifications(Index.java:259)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$MetaIndexUpdateRequest.execute(IndexManager.java:1794)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:527)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:46:12.292
+!MESSAGE Failed to save JDT index: Index for /practica0
+!STACK 0
+java.io.UTFDataFormatException
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:984)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:756)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:641)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:533)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndex(IndexManager.java:1154)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1198)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:836)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.jdt.core 4 0 2024-03-19 23:46:12.471
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index at offset 1687954 and size 1696874851
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategory(DiskIndex.java:486)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategories(DiskIndex.java:478)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:580)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1247)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1223)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:836)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:46:12.613
+!MESSAGE Failed to update meta index
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 1285 and size 301991790
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:181)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.index.Index.getMetaIndexQualifications(Index.java:259)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$MetaIndexUpdateRequest.execute(IndexManager.java:1794)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:527)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:46:55.067
+!MESSAGE Failed to save JDT index: Index for /practica0
+!STACK 0
+java.io.UTFDataFormatException
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readStreamChars(DiskIndex.java:984)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readChunk(DiskIndex.java:756)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readAllDocumentNames(DiskIndex.java:641)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:533)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndex(IndexManager.java:1154)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1198)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:836)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.jdt.core 4 0 2024-03-19 23:46:55.251
+!MESSAGE Failed to update qualified index.
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index at offset 1687954 and size 1696874851
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategory(DiskIndex.java:486)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeCategories(DiskIndex.java:478)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.mergeWith(DiskIndex.java:580)
+	at org.eclipse.jdt.internal.core.index.Index.save(Index.java:230)
+	at org.eclipse.jdt.internal.core.index.MetaIndex.save(MetaIndex.java:100)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveMetaIndex(IndexManager.java:1247)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.saveIndexes(IndexManager.java:1223)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager.notifyIdle(IndexManager.java:836)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:494)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-03-19 23:46:55.403
+!MESSAGE Failed to update meta index
+!STACK 0
+java.io.IOException: Failed to read index data from file:/C:/Users/LEGION/OneDrive/Documentos/TechCraftedDesigns/Practica0/.metadata/.plugins/org.eclipse.jdt.core/2802286744.index at offset 1285 and size 301991790
+	at org.eclipse.jdt.internal.core.index.DiskIndex.readCategoryTable(DiskIndex.java:686)
+	at org.eclipse.jdt.internal.core.index.DiskIndex.addQueryResults(DiskIndex.java:181)
+	at org.eclipse.jdt.internal.core.index.Index.query(Index.java:169)
+	at org.eclipse.jdt.internal.core.index.Index.getMetaIndexQualifications(Index.java:259)
+	at org.eclipse.jdt.internal.core.search.indexing.IndexManager$MetaIndexUpdateRequest.execute(IndexManager.java:1794)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.indexerLoop(JobManager.java:527)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.OutOfMemoryError: Java heap space
