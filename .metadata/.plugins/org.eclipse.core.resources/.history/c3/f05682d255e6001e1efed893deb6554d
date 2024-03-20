@@ -19,8 +19,7 @@ public class Ejercicio4 {
 		System.out.println(1.0/2.0);
 		System.out.println(1.0/2);
 		System.out.println(1/2.0);
-		//System.out.println("1"/"2"); devuelve error porque
-		//no se pueden dividir Strings.
+		System.out.println("1"/"2");
 		System.out.println(1+2);
 		System.out.println("1"+"2");
 		System.out.println(16/2*4);
