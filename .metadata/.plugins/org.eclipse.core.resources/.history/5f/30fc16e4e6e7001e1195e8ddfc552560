@@ -1,0 +1,30 @@
+package practica0;
+
+//Escribir las versiones recursivas de los siguientes métodos 
+//de la Sección 3:
+
+//b) sumatoriaPares: static int sumatoriaParesRec(int n)
+//c) potencia: static int potenciaRec(double x, int n)
+//d) factorial: static int factorialRec(int n)
+
+
+public class Ejercicio30 {
+
+	public static void main(String[] args) {
+		System.out.println(sumatoriaRec(10));
+		
+
+	}
+//a) sumatoria: 
+	
+	public static int sumatoriaRec(int n) {
+		if(n==1) {
+			return n;
+		}
+		else {
+			return sumatoriaRec(n-1);
+		}
+		
+	}
+
+}
