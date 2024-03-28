@@ -1,0 +1,6 @@
+Escribir el método public static void imprimir(int[] a) que recibe un arreglo de enteros y muestra el contenido del mismo por pantalla.
+Implementar una función public static double promedio(int[] a) que dado un arreglo de enteros, devuelva el promedio de sus elementos.
+Implementar una función public static int maximo(int[] a), que dado un arreglo de enteros desordenado devuelva el máximo elemento del arreglo.
+Implementar una función public static int[] reverso(int[] a), que dado un arreglo de enteros devuelva un nuevo arreglo con los elementos en orden inverso.
+Escribir el método public static int[] pedirArreglo(int n) que construye un arreglo de enteros, solicitando al usuario el valor de cada una de las n posiciones y devuelve el arreglo construído.
+Implementar una función public static boolean todosDivisores(int[]a, int n), que dado un arreglo de enteros devuelva true si todos los elementos del arreglo son divisores de n.
