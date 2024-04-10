@@ -7,7 +7,7 @@ package Ejercicios_Strings_Recursion;
 public class Ejercicio2 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		imprimirEspaciado("perro");
 
 	}
 	public static void imprimirEspaciado(String s) {
@@ -15,7 +15,7 @@ public class Ejercicio2 {
 			System.out.println();
 			return;
 		}
-		System.out.println(s.charAt(0)+" ");
+		System.out.print(s.charAt(0)+" ");
 		imprimirEspaciado(Resto.resto(s));
 	}
 
